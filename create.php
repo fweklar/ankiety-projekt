@@ -1,5 +1,8 @@
-<?php
+/**
+*Copyright (c) 2020 Filip Węklar, Konrad Gorczyca
+*/
 
+<?php
   session_start(); 
 
   if (!isset($_SESSION['username'])) {
@@ -11,7 +14,6 @@
   	unset($_SESSION['username']);
   	header("location: /phpoll/registration/login.php");
   }
-
 include 'functions.php';
 $pdo = pdo_connect_mysql();
 $msg = '';

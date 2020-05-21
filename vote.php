@@ -1,3 +1,7 @@
+/**
+*Copyright (c) 2020 Filip Węklar, Konrad Gorczyca
+*/
+
 <?php
 
   session_start(); 

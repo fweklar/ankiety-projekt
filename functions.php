@@ -1,4 +1,11 @@
+/**
+*Copyright (c) 2020 Filip Węklar, Konrad Gorczyca
+*/
+
 <?php
+/**
+ * @return PDO
+ */
 function pdo_connect_mysql() {
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';

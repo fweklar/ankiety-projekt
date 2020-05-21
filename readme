@@ -1,0 +1,68 @@
+Tytuł projektu:
+System umożliwiający anonimowe ankiety/głosowanie.
+
+Cel projektu:
+Celem projektu było stworzenie aplikacji umożliwiającej tworzenie ankiet i oddawania w nich głosów. Aplikacja jest dostępna tylko dla zarejestrowanych użytkowników, którzy mogą oddać anonimowy głos w danej ankiecie tylko raz. Tworzenie ankiety również jest anonimowe, zarówno dla użytkowników, jak i administratora.
+
+Utworzone w:
+-HTML
+-CSS
+-PHP 
+-MySQL
+
+Uruchamianie:
+W przypadku zainstalowanego pakietu XAMPP należy włączyć Apache, MySQL oraz przy użyciu phpMyAdmin stworzyć bazę danych MySQL przy użyciu gotowej procedury phppoll.sql
+
+Autorzy:
+-Filip Węklar
+-Konrad Gorczyca
+
+Struktura plików:
+-registration
+--errors.php
+--login.php
+--register.php
+--server.php 
+--style.css
+-phppoll
+--create.php 
+--delete.php
+--functions.php
+--index.php 
+--result.php
+--vote.php
+--phppoll.sql 
+--style.css
+
+
+Dokumentacja:
+-registration
+--errors.php - plik zawierający błędy w przypadku niepoprawnego logowania.
+--login.php - strona odpowiadająca za logowanie się użytkownika.
+--register.php - strona odpowiadająca za rejestrację użytkownika.
+--server.php - plik zawiera funkcjonalność połączenia z baza danych.
+--style.css - arkusz stylów dla systemu logowania i rejstracji.
+-phppoll
+--create.php - strona zawierająca możliwość tworzenia ankiet.
+--delete.php - plik zawierający możliwość kasowania ankiet.
+--functions.php - plik zawierający funkcje połączenia z bazą danych.
+--index.php -główna strona zawierająca liste utworzonych ankiet.
+--result.php - strona zawierająca wyniki dla okreslonej ankiety.
+--vote.php - strona pokazująca listę odpowiedzi dla określonej ankiety.
+--style.css - arkusz stylóþw CSS dla naszego systemu ankiet i głosowania.
+--phppoll.sql  - prodecura sql odpowiadająca za utworzenie bazy zawierającej tabele: polls, poll_answers, users.
+---users - tabela zawierająca wszystkie dane użytkownika.
+----ID(int(11) - unikalne ID dla użytkownika.
+----username(varchar(100))  - pole przegowywujące login użytkownika.
+----email(varchar(100)) - pole przechowywujące e-mail użytkownika.
+----password(varchar(100)) - pole przechowywujące hasło użytkownika.
+---polls - tabela zawierająca informacje o ankietach które tworzymy
+----ID(int(11)) - unikalne ID dla ankiety, działa na zasadzie inkrementacji.
+----title(text) - tytuł ankiety.
+----desc(text) - opis ankiety, tekst opcjonalny.
+---poll_answers - tabela zawierająca wszystkie odpowiedzi dla naszych utworzonych ankiet.
+----ID(int(11)) - unikalne ID dla odpowiedzi, działa na zasadzie inkrementacji.
+----poll_ID - unikalne ID dla odpowiedzi, dzięki temu polu możemy powiązać obie tabele.
+----title(text) - tytuł odpowiedzi na ankietę.
+----votes(int(11)) - glosy w ankietach.
+
